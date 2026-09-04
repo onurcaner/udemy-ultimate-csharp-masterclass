@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningConsoleApp", "LearningConsoleApp\LearningConsoleApp.csproj", "{C82831F3-9E5B-4137-844A-5F12C23AB75C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section09_StarWarsPlanetStats", "Section09_StarWarsPlanetStats\Section09_StarWarsPlanetStats.csproj", "{FF21326B-7F24-4EAB-AF0E-24B440D48A8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section10_CustomLinkedList", "Section10_CustomLinkedList\Section10_CustomLinkedList.csproj", "{081AAA44-7DCF-4ED5-849C-8F0D25D73AE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section11_TicketsDataAggregator", "Section11_TicketsDataAggregator\Section11_TicketsDataAggregator.csproj", "{1EDAEAC9-58D0-4E75-A483-36E32D29711C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C82831F3-9E5B-4137-844A-5F12C23AB75C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C82831F3-9E5B-4137-844A-5F12C23AB75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C82831F3-9E5B-4137-844A-5F12C23AB75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C82831F3-9E5B-4137-844A-5F12C23AB75C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF21326B-7F24-4EAB-AF0E-24B440D48A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF21326B-7F24-4EAB-AF0E-24B440D48A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF21326B-7F24-4EAB-AF0E-24B440D48A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF21326B-7F24-4EAB-AF0E-24B440D48A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{081AAA44-7DCF-4ED5-849C-8F0D25D73AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{081AAA44-7DCF-4ED5-849C-8F0D25D73AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{081AAA44-7DCF-4ED5-849C-8F0D25D73AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{081AAA44-7DCF-4ED5-849C-8F0D25D73AE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EDAEAC9-58D0-4E75-A483-36E32D29711C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EDAEAC9-58D0-4E75-A483-36E32D29711C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EDAEAC9-58D0-4E75-A483-36E32D29711C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EDAEAC9-58D0-4E75-A483-36E32D29711C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
