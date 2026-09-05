@@ -2,7 +2,7 @@ using Section09_StarWarsPlanetStats.PlanetsApi;
 
 namespace Section09_StarWarsPlanetStats.Models;
 
-public class PlanetsModel : IPlanetsModel
+internal class PlanetsModel : IPlanetsModel
 {
     private readonly IPlanetsApiClient _planetsApiClient = new PlanetsApiClient();
 

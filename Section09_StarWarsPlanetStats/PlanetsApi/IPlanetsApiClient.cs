@@ -1,6 +1,6 @@
 namespace Section09_StarWarsPlanetStats.PlanetsApi;
 
-public interface IPlanetsApiClient
+internal interface IPlanetsApiClient
 {
     public Task<IEnumerable<IPlanetDto>> GetPlanetsAsync();
 }

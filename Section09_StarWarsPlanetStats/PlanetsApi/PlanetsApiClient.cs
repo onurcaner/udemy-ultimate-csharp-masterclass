@@ -2,7 +2,7 @@ using System.Text.Json;
 
 namespace Section09_StarWarsPlanetStats.PlanetsApi;
 
-public class PlanetsApiClient : IPlanetsApiClient
+internal class PlanetsApiClient : IPlanetsApiClient
 {
     public async Task<IEnumerable<IPlanetDto>> GetPlanetsAsync()
     {

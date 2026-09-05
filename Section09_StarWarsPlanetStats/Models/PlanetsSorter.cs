@@ -1,6 +1,6 @@
 namespace Section09_StarWarsPlanetStats.Models;
 
-public static class PlanetsSorter
+internal static class PlanetsSorter
 {
     private static readonly Dictionary<PlanetProperty, Func<IPlanet, object?>>
         s_planetPropertyToPropertySelectorMapping = new()

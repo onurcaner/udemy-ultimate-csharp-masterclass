@@ -4,7 +4,7 @@ using Section09_StarWarsPlanetStats.TablePrinter;
 namespace Section09_StarWarsPlanetStats;
 
 // https://docs.google.com/document/d/1c501Fzm5JtTl-gCiOepnY3LoJYCQ33PxeXZYPif8xkM/
-public class App
+internal class App
 {
     public async Task RunAsync()
     {
@@ -15,7 +15,12 @@ public class App
 
         // Printing the Table
         Console.WriteLine();
-        new UniversalTablePrinter(new PlanetToTableColumnsConverter().ColumnCount, 20).PrintTable(
+        new UniversalTablePrinter(
+            new ConsoleLinePrinter(),
+            new PlanetToTableColumnsConverter().ColumnCount,
+            20,
+            1
+        ).PrintTable(
             new PlanetToTableColumnsConverter().CreateHeaderColumns(),
             planets.Select(new PlanetToTableColumnsConverter().CreateDataColumns)
         );
@@ -31,12 +36,12 @@ public class App
             Console.WriteLine("surface water");
             Console.WriteLine("population");
             string? userInput = Console.ReadLine();
-            if (userInput is not { } nonNullUserInput)
+            if (userInput is null)
             {
                 continue;
             }
 
-            switch (nonNullUserInput.ToLower().Trim())
+            switch (userInput.ToLower().Trim())
             {
                 case "diameter":
                     selectedPlanetProperty = PlanetProperty.Diameter;
@@ -64,7 +69,11 @@ public class App
         // Printing Sorted Table
         IEnumerable<IPlanet> sortedPlanets = planets.ToSorted(selectedPlanetProperty);
         Console.WriteLine();
-        new UniversalTablePrinter(new PlanetToTableColumnsConverter().ColumnCount, 20).PrintTable(
+        new UniversalTablePrinter(new ConsoleLinePrinter(),
+            new PlanetToTableColumnsConverter().ColumnCount,
+            20,
+            1
+        ).PrintTable(
             new PlanetToTableColumnsConverter().CreateHeaderColumns(),
             sortedPlanets.Select(new PlanetToTableColumnsConverter().CreateDataColumns)
         );
@@ -73,5 +82,13 @@ public class App
         // Exit
         Console.WriteLine("Press any key to close.");
         Console.ReadKey();
+    }
+
+    internal class ConsoleLinePrinter : ILinePrinter
+    {
+        public void PrintLine(string line)
+        {
+            Console.WriteLine(line);
+        }
     }
 }

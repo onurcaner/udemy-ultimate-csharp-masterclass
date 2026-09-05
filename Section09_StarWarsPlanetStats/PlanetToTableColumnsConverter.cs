@@ -2,7 +2,7 @@ using Section09_StarWarsPlanetStats.Models;
 
 namespace Section09_StarWarsPlanetStats;
 
-public class PlanetToTableColumnsConverter
+internal class PlanetToTableColumnsConverter
 {
     public int ColumnCount => this.CreateHeaderColumns().Count();
 

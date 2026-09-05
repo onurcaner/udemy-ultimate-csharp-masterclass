@@ -1,6 +1,6 @@
 namespace Section09_StarWarsPlanetStats.Models;
 
-public interface IPlanetsModel
+internal interface IPlanetsModel
 {
     public Task<IEnumerable<IPlanet>> GetPlanetsAsync();
 }

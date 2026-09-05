@@ -11,20 +11,20 @@ internal class Program
     }
 }
 
-public interface ICustomNode<T>
+internal interface ICustomNode<T>
 {
     public T Value { get; set; }
     public ICustomNode<T>? Previous { get; set; }
     public ICustomNode<T>? Next { get; set; }
 }
 
-public interface ICustomLinkedList<T> : ICollection<T>
+internal interface ICustomLinkedList<T> : ICollection<T>
 {
     public void AddToFront(T item);
     public void AddToEnd(T item);
 }
 
-public class CustomNode<T> : ICustomNode<T>
+internal class CustomNode<T> : ICustomNode<T>
 {
     public CustomNode(T value)
     {

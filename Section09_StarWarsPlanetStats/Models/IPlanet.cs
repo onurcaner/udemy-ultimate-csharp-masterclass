@@ -1,6 +1,6 @@
 namespace Section09_StarWarsPlanetStats.Models;
 
-public interface IPlanet
+internal interface IPlanet
 {
     public string Name { get; }
     public long? Diameter { get; }

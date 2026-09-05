@@ -2,7 +2,7 @@ using Section09_StarWarsPlanetStats.PlanetsApi;
 
 namespace Section09_StarWarsPlanetStats.Models;
 
-public class Planet : IPlanet
+internal class Planet : IPlanet
 {
     public Planet(
         string name,

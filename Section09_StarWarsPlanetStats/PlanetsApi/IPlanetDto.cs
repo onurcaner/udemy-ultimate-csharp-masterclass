@@ -1,6 +1,6 @@
 namespace Section09_StarWarsPlanetStats.PlanetsApi;
 
-public interface IPlanetDto
+internal interface IPlanetDto
 {
     public string Name { get; }
     public string Diameter { get; }

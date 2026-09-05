@@ -7,15 +7,25 @@ public class UniversalTablePrinter
 
     private readonly int _columnCount;
     private readonly int _columnSize;
+    private readonly int _inlinePadding;
+    private readonly ILinePrinter _linePrinter;
 
 
-    public UniversalTablePrinter(int columnCount, int columnSize)
+    public UniversalTablePrinter(
+        ILinePrinter linePrinter,
+        int columnCount,
+        int columnSize,
+        int inlinePadding
+    )
     {
         ArgumentOutOfRangeException.ThrowIfNegativeOrZero(columnCount);
         ArgumentOutOfRangeException.ThrowIfNegativeOrZero(columnSize);
+        ArgumentOutOfRangeException.ThrowIfNegative(inlinePadding);
 
+        this._linePrinter = linePrinter;
         this._columnCount = columnCount;
         this._columnSize = columnSize;
+        this._inlinePadding = inlinePadding;
     }
 
     public void PrintTable(IEnumerable<object> headerColumns, IEnumerable<IEnumerable<object>> dataMatrix)
@@ -41,12 +51,16 @@ public class UniversalTablePrinter
 
     public void PrintRow(IEnumerable<string> columns)
     {
-        Console.WriteLine(this.FormatRow(columns));
+        this._linePrinter.PrintLine(
+            this.FormatRow(columns)
+        );
     }
 
     public void PrintRowSeparator()
     {
-        Console.WriteLine(this.CreateRowSeparator());
+        this._linePrinter.PrintLine(
+            this.CreateRowSeparator()
+        );
     }
 
     private string FormatRow(IEnumerable<string> columns)
@@ -59,7 +73,9 @@ public class UniversalTablePrinter
 
         string row = string.Concat(
             UniversalTablePrinter.ColumnSeparator,
+            new string(' ', this._inlinePadding),
             string.Join(UniversalTablePrinter.ColumnSeparator, paddedColumns),
+            new string(' ', this._inlinePadding),
             UniversalTablePrinter.ColumnSeparator
         );
 

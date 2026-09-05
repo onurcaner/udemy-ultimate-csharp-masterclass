@@ -1,6 +1,6 @@
 namespace Section09_StarWarsPlanetStats.Models;
 
-public enum PlanetProperty
+internal enum PlanetProperty
 {
     Name,
     Diameter,
