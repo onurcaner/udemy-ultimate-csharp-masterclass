@@ -3,7 +3,6 @@ using Section09_StarWarsPlanetStats.TablePrinter;
 
 namespace Section09_StarWarsPlanetStats;
 
-// https://docs.google.com/document/d/1c501Fzm5JtTl-gCiOepnY3LoJYCQ33PxeXZYPif8xkM/
 internal class App
 {
     public async Task RunAsync()

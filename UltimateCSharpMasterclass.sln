@@ -6,7 +6,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section09_StarWarsPlanetSta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section10_CustomLinkedList", "Section10_CustomLinkedList\Section10_CustomLinkedList.csproj", "{081AAA44-7DCF-4ED5-849C-8F0D25D73AE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section11_TicketsDataAggregator", "Section11_TicketsDataAggregator\Section11_TicketsDataAggregator.csproj", "{1EDAEAC9-58D0-4E75-A483-36E32D29711C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section12_TicketsDataAggregator", "Section12_TicketsDataAggregator\Section12_TicketsDataAggregator.csproj", "{1EDAEAC9-58D0-4E75-A483-36E32D29711C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section14_NumericTypesSuggester", "Section14_NumericTypesSuggester\Section14_NumericTypesSuggester.csproj", "{7A7B7F97-FEE1-4C31-9DE4-387D4A5AAE95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +32,9 @@ Global
 		{1EDAEAC9-58D0-4E75-A483-36E32D29711C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EDAEAC9-58D0-4E75-A483-36E32D29711C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EDAEAC9-58D0-4E75-A483-36E32D29711C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A7B7F97-FEE1-4C31-9DE4-387D4A5AAE95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A7B7F97-FEE1-4C31-9DE4-387D4A5AAE95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A7B7F97-FEE1-4C31-9DE4-387D4A5AAE95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A7B7F97-FEE1-4C31-9DE4-387D4A5AAE95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

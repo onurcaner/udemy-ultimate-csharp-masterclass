@@ -1,10 +1,10 @@
-using Section11_TicketsDataAggregator.OutputWriter;
-using Section11_TicketsDataAggregator.PdfReader;
-using Section11_TicketsDataAggregator.TicketFormatter;
-using Section11_TicketsDataAggregator.Tickets;
-using Section11_TicketsDataAggregator.TicketsParser;
+using Section12_TicketsDataAggregator.OutputWriter;
+using Section12_TicketsDataAggregator.PdfReader;
+using Section12_TicketsDataAggregator.TicketFormatter;
+using Section12_TicketsDataAggregator.Tickets;
+using Section12_TicketsDataAggregator.TicketsParser;
 
-namespace Section11_TicketsDataAggregator;
+namespace Section12_TicketsDataAggregator;
 
 internal class App
 {

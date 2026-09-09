@@ -40,6 +40,10 @@ dotnet_naming_style.t_pascal_case.required_prefix = T
 dotnet_naming_style.pascal_case_async.capitalization = pascal_case
 dotnet_naming_style.pascal_case_async.required_suffix = Async
 
+# PascalCaseHandler
+dotnet_naming_style.pascal_case_handler.capitalization = pascal_case
+dotnet_naming_style.pascal_case_handler.required_suffix = Handler
+
 # Naming Symbols --------------------------------------------------------------
 
 # Namespaces
@@ -157,9 +161,9 @@ dotnet_naming_rule.events_should_be_pascal_case.symbols = events
 dotnet_naming_rule.events_should_be_pascal_case.style = pascal_case
 
 # Delegates
-dotnet_naming_rule.delegates_should_be_pascal_case.severity = warning
-dotnet_naming_rule.delegates_should_be_pascal_case.symbols = delegates
-dotnet_naming_rule.delegates_should_be_pascal_case.style = pascal_case
+dotnet_naming_rule.delegates_should_be_pascal_case_handler.severity = warning
+dotnet_naming_rule.delegates_should_be_pascal_case_handler.symbols = delegates
+dotnet_naming_rule.delegates_should_be_pascal_case_handler.style = pascal_case_handler
 
 # Parameters
 dotnet_naming_rule.function_parameters_should_be_camel_case.severity = warning

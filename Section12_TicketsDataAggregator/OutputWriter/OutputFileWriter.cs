@@ -1,4 +1,4 @@
-namespace Section11_TicketsDataAggregator.OutputWriter;
+namespace Section12_TicketsDataAggregator.OutputWriter;
 
 internal class OutputFileWriter : IOutputWriter
 {

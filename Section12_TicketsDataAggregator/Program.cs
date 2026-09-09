@@ -1,11 +1,10 @@
-﻿using Section11_TicketsDataAggregator.OutputWriter;
-using Section11_TicketsDataAggregator.PdfReader;
-using Section11_TicketsDataAggregator.TicketFormatter;
+﻿using Section12_TicketsDataAggregator.OutputWriter;
+using Section12_TicketsDataAggregator.PdfReader;
+using Section12_TicketsDataAggregator.TicketFormatter;
 
-namespace Section11_TicketsDataAggregator;
+namespace Section12_TicketsDataAggregator;
 
-// https://docs.google.com/document/d/1nIq2gD-1uwCnQz5OrDpouEW1j3GKSRGwBN_07moVFd8/
-internal class Program
+internal static class Program
 {
     private const string FolderPath = "ticket_files";
     private const string OutputTextFileName = "tickets.txt";

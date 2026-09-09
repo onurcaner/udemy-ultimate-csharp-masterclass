@@ -1,7 +1,7 @@
 using System.Globalization;
-using Section11_TicketsDataAggregator.Tickets;
+using Section12_TicketsDataAggregator.Tickets;
 
-namespace Section11_TicketsDataAggregator.TicketsParser;
+namespace Section12_TicketsDataAggregator.TicketsParser;
 
 internal class TicketsPdfTextParser
 {

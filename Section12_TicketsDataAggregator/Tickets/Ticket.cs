@@ -1,4 +1,4 @@
-namespace Section11_TicketsDataAggregator.Tickets;
+namespace Section12_TicketsDataAggregator.Tickets;
 
 internal record Ticket : ITicket
 {

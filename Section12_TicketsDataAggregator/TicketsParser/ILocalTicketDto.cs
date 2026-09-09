@@ -1,4 +1,4 @@
-namespace Section11_TicketsDataAggregator.TicketsParser;
+namespace Section12_TicketsDataAggregator.TicketsParser;
 
 internal interface ILocalTicketDto
 {

@@ -1,6 +1,6 @@
-using Section11_TicketsDataAggregator.Tickets;
+using Section12_TicketsDataAggregator.Tickets;
 
-namespace Section11_TicketsDataAggregator.TicketFormatter;
+namespace Section12_TicketsDataAggregator.TicketFormatter;
 
 internal class TicketCsvFormatter : ITicketFormatter
 {

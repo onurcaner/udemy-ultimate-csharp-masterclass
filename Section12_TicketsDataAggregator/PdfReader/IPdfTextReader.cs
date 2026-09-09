@@ -1,4 +1,4 @@
-namespace Section11_TicketsDataAggregator.PdfReader;
+namespace Section12_TicketsDataAggregator.PdfReader;
 
 internal interface IPdfTextReader
 {

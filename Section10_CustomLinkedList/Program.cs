@@ -2,8 +2,7 @@
 
 namespace Section10_CustomLinkedList;
 
-// https://docs.google.com/document/d/1o8Xyy_6WhpQjKWs80YvkxSpb0aaibmriwrgCgeMikiY/
-internal class Program
+internal static class Program
 {
     private static void Main()
     {
