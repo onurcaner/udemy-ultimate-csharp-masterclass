@@ -97,7 +97,7 @@ public partial class MainForm : Form
     {
         if (sender is not TextBox textBox)
         {
-            throw new Exception();
+            throw new InvalidOperationException($"Unexpected sender type: {sender.GetType()}");
         }
 
         this._formState.MinValue = textBox.Text;
@@ -107,7 +107,7 @@ public partial class MainForm : Form
     {
         if (sender is not TextBox textBox)
         {
-            throw new Exception();
+            throw new InvalidOperationException($"Unexpected sender type: {sender.GetType()}");
         }
 
         this._formState.MaxValue = textBox.Text;
@@ -117,7 +117,7 @@ public partial class MainForm : Form
     {
         if (sender is not CheckBox checkBox)
         {
-            throw new Exception();
+            throw new InvalidOperationException($"Unexpected sender type: {sender.GetType()}");
         }
 
         this._formState.IsIntegral = checkBox.Checked;
@@ -127,7 +127,7 @@ public partial class MainForm : Form
     {
         if (sender is not CheckBox checkBox)
         {
-            throw new Exception();
+            throw new InvalidOperationException($"Unexpected sender type: {sender.GetType()}");
         }
 
         this._formState.IsPrecise = checkBox.Checked;

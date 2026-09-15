@@ -84,8 +84,7 @@ public class CustomLinkedList<T> : ICustomLinkedList<T>
         ArgumentOutOfRangeException.ThrowIfNegativeOrZero(arrayIndex);
         ArgumentOutOfRangeException.ThrowIfGreaterThan(
             arrayIndex + this.Count,
-            array.Length,
-            $"{nameof(array)}, {nameof(arrayIndex)}"
+            array.Length
         );
 
         int indexOffset = 0;
@@ -99,7 +98,7 @@ public class CustomLinkedList<T> : ICustomLinkedList<T>
     {
         ICustomNode<T>? foundNode = this
             .GetNodes()
-            .FirstOrDefault(node => node.Value != null && node.Value.Equals(item));
+            .FirstOrDefault(node => node.Value is not null && node.Value.Equals(item));
         if (foundNode is null)
         {
             return false;

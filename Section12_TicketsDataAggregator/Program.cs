@@ -12,33 +12,32 @@ internal static class Program
 
     private static void Main()
     {
+        if (true)
         {
-            string outputPath = Path.Combine(Program.FolderPath, Program.OutputTextFileName);
-            using OutputFileWriter outputFileWriter = new(outputPath);
-
+            string txtOutputPath = Path.Combine(Program.FolderPath, Program.OutputTextFileName);
+            using OutputFileWriter txtOutputFileWriter = new(txtOutputPath);
             new App(
                 pdfTextReader: new PdfTextReader(),
                 folderPath: Program.FolderPath,
-                outputWriter: outputFileWriter,
+                outputWriter: txtOutputFileWriter,
                 ticketFormatter: new TicketTextualFormatter()
             ).Execute();
-
-            Console.WriteLine($"Tickets data saved to {outputPath}");
+            Console.WriteLine($"Tickets data saved to {txtOutputPath}");
         }
 
+        if (true)
         {
-            string outputPath = Path.Combine(Program.FolderPath, Program.OutputCsvFileName);
-            using OutputFileWriter csvOutputWriter = new(outputPath);
-
+            string csvOutputPath = Path.Combine(Program.FolderPath, Program.OutputCsvFileName);
+            using OutputFileWriter csvOutputFileWriter = new(csvOutputPath);
             new App(
                 pdfTextReader: new PdfTextReader(),
                 folderPath: Program.FolderPath,
-                outputWriter: csvOutputWriter,
+                outputWriter: csvOutputFileWriter,
                 ticketFormatter: new TicketCsvFormatter()
             ).Execute();
-
-            Console.WriteLine($"Tickets data saved to {outputPath}");
+            Console.WriteLine($"Tickets data saved to {csvOutputPath}");
         }
+
 
         Console.WriteLine();
         Console.WriteLine("Press any key to close.");

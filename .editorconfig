@@ -77,9 +77,9 @@ dotnet_naming_symbols.public_fields.applicable_accessibilities = public
 dotnet_naming_symbols.instance_fields.applicable_kinds = field
 dotnet_naming_symbols.instance_fields.applicable_accessibilities = internal, private, protected
 
-dotnet_naming_symbols.static_fields.applicable_kinds = field
-dotnet_naming_symbols.static_fields.applicable_accessibilities = internal, private
-dotnet_naming_symbols.static_fields.required_modifiers = static
+dotnet_naming_symbols.private_static_fields.applicable_kinds = field
+dotnet_naming_symbols.private_static_fields.applicable_accessibilities = internal, private
+dotnet_naming_symbols.private_static_fields.required_modifiers = static
 
 dotnet_naming_symbols.constant_fields.applicable_kinds = field
 dotnet_naming_symbols.constant_fields.applicable_accessibilities = *
@@ -144,12 +144,12 @@ dotnet_naming_rule.instance_fields_should_be_underscore_camel_case.severity = wa
 dotnet_naming_rule.instance_fields_should_be_underscore_camel_case.symbols = instance_fields
 dotnet_naming_rule.instance_fields_should_be_underscore_camel_case.style = underscore_camel_case
 
-dotnet_naming_rule.static_fields_should_be_s_underscore_camel_case.severity = warning
-dotnet_naming_rule.static_fields_should_be_s_underscore_camel_case.symbols = static_fields
-dotnet_naming_rule.static_fields_should_be_s_underscore_camel_case.style = s_underscore_camel_case
-dotnet_naming_rule.static_fields_should_be_t_underscore_camel_case.severity = warning
-dotnet_naming_rule.static_fields_should_be_t_underscore_camel_case.symbols = static_fields
-dotnet_naming_rule.static_fields_should_be_t_underscore_camel_case.style = t_underscore_camel_case
+dotnet_naming_rule.private_static_fields_should_be_s_underscore_camel_case.severity = warning
+dotnet_naming_rule.private_static_fields_should_be_s_underscore_camel_case.symbols = private_static_fields
+dotnet_naming_rule.private_static_fields_should_be_s_underscore_camel_case.style = s_underscore_camel_case
+dotnet_naming_rule.private_static_fields_should_be_t_underscore_camel_case.severity = warning
+dotnet_naming_rule.private_static_fields_should_be_t_underscore_camel_case.symbols = private_static_fields
+dotnet_naming_rule.private_static_fields_should_be_t_underscore_camel_case.style = t_underscore_camel_case
 
 dotnet_naming_rule.constant_fields_should_be_pascal_case.severity = warning
 dotnet_naming_rule.constant_fields_should_be_pascal_case.symbols = constant_fields
@@ -233,7 +233,7 @@ dotnet_code_quality_unused_parameters = all:suggestion
 dotnet_style_prefer_simplified_interpolation = true:warning
 
 # Use pattern matching (IDE0078 and IDE0260)
-dotnet_style_prefer_pattern_matching = true:warning
+csharp_style_prefer_pattern_matching = true:warning
 csharp_style_pattern_matching_over_as_with_null_check = true:warning
 
 

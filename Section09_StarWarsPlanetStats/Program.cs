@@ -4,6 +4,6 @@ internal static class Program
 {
     private static async Task Main()
     {
-        await new App().RunAsync();
+        await App.RunAsync();
     }
 }

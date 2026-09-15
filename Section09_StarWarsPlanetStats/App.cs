@@ -5,7 +5,7 @@ namespace Section09_StarWarsPlanetStats;
 
 internal class App
 {
-    public async Task RunAsync()
+    public static async Task RunAsync()
     {
         // Fetching Planets
         Console.WriteLine("Hello, World! Fetching Star Wars Planet Stats..");
@@ -16,12 +16,12 @@ internal class App
         Console.WriteLine();
         new UniversalTablePrinter(
             new ConsoleLinePrinter(),
-            new PlanetToTableColumnsConverter().ColumnCount,
+            PlanetToTableColumnsConverter.ColumnCount,
             20,
             1
         ).PrintTable(
-            new PlanetToTableColumnsConverter().CreateHeaderColumns(),
-            planets.Select(new PlanetToTableColumnsConverter().CreateDataColumns)
+            PlanetToTableColumnsConverter.CreateHeaderColumns(),
+            planets.Select(PlanetToTableColumnsConverter.CreateDataColumns)
         );
 
 
@@ -69,12 +69,12 @@ internal class App
         IEnumerable<IPlanet> sortedPlanets = planets.ToSorted(selectedPlanetProperty);
         Console.WriteLine();
         new UniversalTablePrinter(new ConsoleLinePrinter(),
-            new PlanetToTableColumnsConverter().ColumnCount,
+            PlanetToTableColumnsConverter.ColumnCount,
             20,
             1
         ).PrintTable(
-            new PlanetToTableColumnsConverter().CreateHeaderColumns(),
-            sortedPlanets.Select(new PlanetToTableColumnsConverter().CreateDataColumns)
+            PlanetToTableColumnsConverter.CreateHeaderColumns(),
+            sortedPlanets.Select(PlanetToTableColumnsConverter.CreateDataColumns)
         );
 
 

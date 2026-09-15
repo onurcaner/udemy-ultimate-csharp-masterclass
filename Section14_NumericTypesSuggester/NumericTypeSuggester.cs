@@ -40,7 +40,7 @@ internal static class NumericTypeSuggester
             return NumericTypeSuggester.DeriveSuggestedIntegralType(formState);
         }
 
-        throw new Exception();
+        throw new NotImplementedException();
     }
 
     private static SuggestedType DeriveSuggestedPreciseType(FormState formState)

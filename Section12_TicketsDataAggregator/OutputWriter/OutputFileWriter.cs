@@ -9,11 +9,6 @@ internal class OutputFileWriter : IOutputWriter
         this._streamWriter = new StreamWriter(filePath, false);
     }
 
-    public void Dispose()
-    {
-        this._streamWriter.Dispose();
-        GC.SuppressFinalize(this);
-    }
 
     public void WriteLine(string line)
     {
@@ -26,5 +21,16 @@ internal class OutputFileWriter : IOutputWriter
         {
             this._streamWriter.WriteLine(line);
         }
+    }
+
+    public void Dispose()
+    {
+        this.Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        this._streamWriter.Dispose();
     }
 }

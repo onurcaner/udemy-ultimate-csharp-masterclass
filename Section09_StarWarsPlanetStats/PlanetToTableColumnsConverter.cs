@@ -2,11 +2,11 @@ using Section09_StarWarsPlanetStats.Models;
 
 namespace Section09_StarWarsPlanetStats;
 
-internal class PlanetToTableColumnsConverter
+internal static class PlanetToTableColumnsConverter
 {
-    public int ColumnCount => this.CreateHeaderColumns().Count();
+    public static int ColumnCount => PlanetToTableColumnsConverter.CreateHeaderColumns().Count();
 
-    public IEnumerable<string> CreateHeaderColumns()
+    public static IEnumerable<string> CreateHeaderColumns()
     {
         return
         [
@@ -17,7 +17,7 @@ internal class PlanetToTableColumnsConverter
         ];
     }
 
-    public IEnumerable<string> CreateDataColumns(IPlanet planet)
+    public static IEnumerable<string> CreateDataColumns(IPlanet planet)
     {
         string name = planet.Name;
         string diameter = planet.Diameter is not null ? $"{planet.Diameter}km" : "";

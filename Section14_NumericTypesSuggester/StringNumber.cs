@@ -22,7 +22,12 @@ internal class StringNumber
             && decimal.TryParse(right.Value, out decimal rightDecimal))
         {
             decimal difference = leftDecimal - rightDecimal;
-            return difference == 0 ? 0 : difference > 0 ? 1 : -1;
+            if (difference == 0)
+            {
+                return 0;
+            }
+
+            return difference > 0 ? 1 : -1;
         }
 
         if (double.TryParse(left.Value, out double leftDouble)
@@ -33,22 +38,28 @@ internal class StringNumber
             && rightDouble is not double.PositiveInfinity)
         {
             double difference = leftDouble - rightDouble;
-            return difference == 0 ? 0 : difference > 0 ? 1 : -1;
+            if (difference == 0)
+            {
+                return 0;
+            }
+
+            return difference > 0 ? 1 : -1;
         }
 
         if (left.TryParseBigIntegerScientific(out BigInteger leftBigInteger)
             && right.TryParseBigIntegerScientific(out BigInteger rightBigInteger))
         {
             BigInteger difference = leftBigInteger - rightBigInteger;
-            return difference == 0 ? 0 : difference > 0 ? 1 : -1;
+            if (difference == 0)
+            {
+                return 0;
+            }
+
+            return difference > 0 ? 1 : -1;
         }
 
-        if (left.Value.Contains('e'))
-        {
-        }
 
-
-        throw new Exception();
+        throw new InvalidOperationException();
     }
 
     public bool TryParseBigIntegerScientific(out BigInteger result)

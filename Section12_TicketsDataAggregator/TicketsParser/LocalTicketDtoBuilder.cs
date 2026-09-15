@@ -26,11 +26,9 @@ internal class LocalTicketDtoBuilder
 
     public ILocalTicketDto Build()
     {
-        if (this._title is null || this._date is null || this._time is null)
-        {
-            throw new ArgumentNullException(
-                $"title, date, time is not set properly in {nameof(LocalTicketDtoBuilder)}");
-        }
+        ArgumentNullException.ThrowIfNull(this._title);
+        ArgumentNullException.ThrowIfNull(this._date);
+        ArgumentNullException.ThrowIfNull(this._time);
 
         ILocalTicketDto localTicketDto = new LocalTicketDto
         {
