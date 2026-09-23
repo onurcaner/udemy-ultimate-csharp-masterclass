@@ -2,14 +2,6 @@
 
 namespace Section10_CustomLinkedList;
 
-internal static class Program
-{
-    private static void Main()
-    {
-        Console.WriteLine("Hello, World! From Custom Linked List");
-    }
-}
-
 internal interface ICustomNode<T>
 {
     public T Value { get; set; }
