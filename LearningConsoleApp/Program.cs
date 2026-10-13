@@ -1,9 +1,8 @@
 ﻿namespace LearningConsoleApp;
 
-internal static class Program
+internal class Program
 {
-    private static void Main()
+    public static void Main()
     {
-        throw new NotImplementedException();
     }
 }
